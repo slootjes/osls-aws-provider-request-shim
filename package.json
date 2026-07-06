@@ -1,0 +1,45 @@
+{
+  "name": "osls-aws-provider-request-shim",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=14.0"
+  },
+  "description": "OSLS (Serverless Framework v4 fork) plugin that adds AWS SDK v3 compatibility layer for legacy plugins using provider.request()",
+  "author": "Robert Slootjes <robertslootjes@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slootjes/osls-aws-provider-request-shim/issues"
+  },
+  "homepage": "https://github.com/slootjes/osls-aws-provider-request-shim#readme",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slootjes/osls-aws-provider-request-shim"
+  },
+  "keywords": [
+    "serverless",
+    "osls",
+    "serverless-framework",
+    "aws",
+    "aws-sdk",
+    "aws-sdk-v3",
+    "plugin",
+    "compatibility",
+    "provider-request",
+    "shim"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "serverless": ">=4.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
