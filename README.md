@@ -1,6 +1,6 @@
 # osls-aws-provider-request-shim
 
-A compatibility plugin for OSLS (Serverless Framework v4 fork) that adds an AWS SDK v3 compatibility layer for legacy plugins that use `provider.request()`.
+A compatibility plugin for [OSLS](https://github.com/oss-serverless/osls) (Serverless Framework v4 fork) that adds an AWS SDK v3 compatibility layer for legacy plugins that use `provider.request()`.
 
 ## Overview
 
@@ -51,72 +51,16 @@ The plugin currently supports the following AWS services:
 - **SSM** - `@aws-sdk/client-ssm`
 - **Cognito Identity Provider** - `@aws-sdk/client-cognito-identity-provider`
 
-### Adding Additional Services
+To permanently add support for a service, you can create a pull request.
 
-If you need a service that's not listed above, you'll need to install the corresponding AWS SDK v3 package as a dev dependency. The plugin will provide a helpful error message with the exact command to run:
+## Compatibility
 
-```bash
-npm install @aws-sdk/client-[service-name] --save-dev
-```
+These plugins work using this plugin:
 
-To permanently add support for a service, you can fork this plugin and add the service to the `serviceClientMap` in `index.js`.
-
-## Example
-
-Here's an example of a legacy plugin using `provider.request()`:
-
-```javascript
-class MyLegacyPlugin {
-  constructor(serverless, options) {
-    this.serverless = serverless;
-    this.provider = this.serverless.getProvider('aws');
-    
-    this.hooks = {
-      'after:deploy:deploy': this.afterDeploy.bind(this)
-    };
-  }
-  
-  async afterDeploy() {
-    // This will now work with OSLS v4 when using this shim plugin
-    const result = await this.provider.request('Lambda', 'getFunction', {
-      FunctionName: 'my-function'
-    });
-    
-    console.log('Function ARN:', result.Configuration.FunctionArn);
-  }
-}
-
-module.exports = MyLegacyPlugin;
-```
-
-With this shim plugin installed, the above code will work without modification.
+- serverless-stack-termination-protection
+- serverless-step-functions
 
 ## Requirements
 
-- **Node.js**: >= 14.0
 - **OSLS/Serverless Framework**: >= 4.0.0
 - **AWS SDK v3 packages**: Install as needed (the plugin will tell you which ones)
-
-## Peer Dependencies
-
-This plugin requires OSLS (or Serverless Framework) version 4.0.0 or higher.
-
-## License
-
-MIT
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## Issues
-
-If you encounter any issues or need support for additional AWS services, please [open an issue](https://github.com/yourusername/osls-aws-provider-request-shim/issues).
-
-## Version History
-
-### 1.0.0
-- Initial release
-- Support for 14 common AWS services
-- Dynamic AWS SDK v3 package loading
-- Helpful error messages for missing packages
