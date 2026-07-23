@@ -1,6 +1,6 @@
 {
   "name": "osls-aws-provider-request-shim",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OSLS (Serverless Framework fork) plugin that adds AWS SDK v3 compatibility layer for legacy plugins using provider.request()",
   "author": "Robert Slootjes <robertslootjes@gmail.com>",
   "license": "MIT",
