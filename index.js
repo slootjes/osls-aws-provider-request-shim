@@ -33,7 +33,7 @@ class OslsLegacyAwsRequestPlugin {
             STS: { package: '@aws-sdk/client-sts', client: 'STSClient' },
             IAM: { package: '@aws-sdk/client-iam', client: 'IAMClient' },
             ECR: { package: '@aws-sdk/client-ecr', client: 'ECRClient' },
-            ApiGateway: { package: '@aws-sdk/client-api-gateway', client: 'APIGatewayClient' },
+            APIGateway: { package: '@aws-sdk/client-api-gateway', client: 'APIGatewayClient' },
             ApiGatewayV2: { package: '@aws-sdk/client-apigatewayv2', client: 'ApiGatewayV2Client' },
             CloudWatch: { package: '@aws-sdk/client-cloudwatch', client: 'CloudWatchClient' },
             CloudWatchLogs: { package: '@aws-sdk/client-cloudwatch-logs', client: 'CloudWatchLogsClient' },
