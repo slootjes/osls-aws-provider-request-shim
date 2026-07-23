@@ -1,6 +1,6 @@
 # osls-aws-provider-request-shim
 
-A compatibility plugin for [OSLS](https://github.com/oss-serverless/osls) (Serverless Framework v4 fork) that adds an AWS SDK v3 compatibility layer for legacy plugins that use `provider.request()`.
+A compatibility plugin for [OSLS](https://github.com/oss-serverless/osls) v4 that adds an AWS SDK v3 compatibility layer for legacy plugins that use `provider.request()`.
 
 ## Overview
 
