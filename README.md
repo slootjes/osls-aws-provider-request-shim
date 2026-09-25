@@ -50,6 +50,8 @@ The plugin currently supports the following AWS services:
 - **EventBridge** - `@aws-sdk/client-eventbridge`
 - **SSM** - `@aws-sdk/client-ssm`
 - **Cognito Identity Provider** - `@aws-sdk/client-cognito-identity-provider`
+- **SES V2** - `@aws-sdk/client-sesv2`
+- **EC2** - `@aws-sdk/client-ec2`
 
 To permanently add support for a service, you can create a pull request.
 
