@@ -40,6 +40,8 @@ class OslsLegacyAwsRequestPlugin {
             EventBridge: { package: '@aws-sdk/client-eventbridge', client: 'EventBridgeClient' },
             SSM: { package: '@aws-sdk/client-ssm', client: 'SSMClient' },
             CognitoIdentityProvider: { package: '@aws-sdk/client-cognito-identity-provider', client: 'CognitoIdentityProviderClient' },
+            SESV2: { package: '@aws-sdk/client-sesv2', client: 'SESv2Client' },
+            EC2: { package: '@aws-sdk/client-ec2', client: 'EC2Client' },
         };
 
         provider.request = async function(service, method, params) {
